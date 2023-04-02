@@ -3,20 +3,19 @@ package com.vlados.unisubjects;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Subject {
-    private String subjectName;
+public class Subjects {
 
-    private Map<String, Subject> subjects = new HashMap<>();
+    private static Map<String, String> allSubjects = new HashMap<>();
 
-    public Subject(String subjectName) {
-        this.subjectName = subjectName;
+    public static void addSubject(String subjectName) {
+        allSubjects.put(subjectName, subjectName);
     }
 
-    public String getSubjectName() {
-        return subjectName;
+    public static Map<String, String> getAllSubjects() {
+        return allSubjects;
     }
 
-    public void setSubjectName(String subjectName) {
-        this.subjectName = subjectName;
+    public static void setAllSubjects(Map<String, String> allSubjects) {
+        Subjects.allSubjects = allSubjects;
     }
 }
